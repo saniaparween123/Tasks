@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./Task3.css">
+    
+</head>
+<body>
+    <div>
+        <div >
+            <img class="image" src="flower.jpg" >
+        </div>
+        <div>
+            <button id="inp">Like</button>
+            <h1 id="out"></h1>
+        </div>
+
+
+
+        <script>
+            const inp=document.getElementById('inp');
+            const out=document.getElementById('out');
+    
+            let a=0;
+            inp.addEventListener('click',()=>{
+                a++;
+                var userName = prompt("What is your ussername?");
+                if (userName !== null && userName !== "") {
+                    alert("Hello, " + userName + "! Welcome.");
+                } else {
+                    alert("You didn't provide a username. Please try again.");
+                
+                }
+
+                out.innerHTML= `${userName} and ${a} other people like your photo`;
+            })
+    
+    
+        </script>
+    
+    </div>
+</body>
+</html>
