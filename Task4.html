@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Task4.css">
     
 </head>
 <body>
     <div>
-        <div class="head">
-            <span> Hello, This is a page if you click on button it will ask for a input "For your name" and than it display it on the div below this line "Click on button"</span>
-            <button id="inp">button</button>
+        <div class="input_details">
+            <input class="user_inputs"  id="name" placeholder="name" required/> <br/>
+            <input class="user_inputs"  id="city" placeholder="City" required/> <br/>
+            <input class="user_inputs"  id="email" placeholder="email" required/> <br/>
+            <input class="user_inputs"   id="age" placeholder="age" required/> <br/>
+            <input class="user_inputs"   id="phone_number" placeholder="phone number" required/> <br/>
+            <button class="user_inputs" id="click_button">button</button>
+           
         </div>
         <div>
-            
-            <div id="out" class="box"></div>
+            <div id="display_output" class="parentDiv">
+                <div style="height: 80px; border: 0px ; color:Black">
+                    <b>Your information will be shown here.....</b>
+
+                </div>
+            </div>
         </div>
-
-        <script>
-            let out= document.getElementById('out');
-            let inp = document.getElementById('inp');
-
-            
-            let input_array =[];
-            let a=0;
-            inp.addEventListener('click',()=>{
-
-                let input=prompt("Enter your name : ");
-                // out.innerHTML = input;
-                a++;
-                input_array.push(input);
-                var newDiv = document.createElement("div");
-
-                for (i of input_array){
-                    newDiv.innerHTML = i;
-                    out.appendChild(newDiv);
-
-                }
-
-            })
-
-        
-    
-        </script>
     
     </div>
+    <script src="./Task4.js"></script>
 </body>
 </html> 
 
